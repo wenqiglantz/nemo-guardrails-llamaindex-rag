@@ -2,6 +2,7 @@ from typing import Optional
 from nemoguardrails.actions import action
 from llama_index.core import SimpleDirectoryReader
 from llama_index.core.llama_pack import download_llama_pack
+from llama_index.packs.recursive_retriever import RecursiveRetrieverSmallToBigPack
 from llama_index.core.base.base_query_engine import BaseQueryEngine
 from llama_index.core.base.response.schema import StreamingResponse
 
@@ -19,10 +20,10 @@ def init():
     documents = SimpleDirectoryReader("data").load_data()
     print(f'Loaded {len(documents)} documents')
 
-    # download and install dependencies
-    RecursiveRetrieverSmallToBigPack = download_llama_pack(
-        "RecursiveRetrieverSmallToBigPack", "./recursive_retriever_stb_pack"
-    )
+    # # download and install dependencies
+    # RecursiveRetrieverSmallToBigPack = download_llama_pack(
+    #     "RecursiveRetrieverSmallToBigPack", "./recursive_retriever_stb_pack"
+    # )
 
     # create the recursive_retriever_stb_pack
     recursive_retriever_stb_pack = RecursiveRetrieverSmallToBigPack(documents)
