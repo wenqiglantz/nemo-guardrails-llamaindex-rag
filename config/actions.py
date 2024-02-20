@@ -1,7 +1,7 @@
 from typing import Optional
 from nemoguardrails.actions import action
-from llama_index import SimpleDirectoryReader
-from llama_index.llama_pack import download_llama_pack
+from llama_index.core import SimpleDirectoryReader
+from llama_index.core.llama_pack import download_llama_pack
 from llama_index.core.base.base_query_engine import BaseQueryEngine
 from llama_index.core.base.response.schema import StreamingResponse
 
