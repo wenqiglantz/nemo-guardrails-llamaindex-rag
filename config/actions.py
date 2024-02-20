@@ -2,8 +2,8 @@ from typing import Optional
 from nemoguardrails.actions import action
 from llama_index import SimpleDirectoryReader
 from llama_index.llama_pack import download_llama_pack
-from llama_index.indices.query.base import BaseQueryEngine
-from llama_index.response.schema import StreamingResponse
+from llama_index.core.base.base_query_engine import BaseQueryEngine
+from llama_index.core.base.response.schema import StreamingResponse
 
 # Global variable to cache the query_engine
 query_engine_cache = None
